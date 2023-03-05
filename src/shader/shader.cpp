@@ -6,15 +6,15 @@ shader::shader(const std::string& vertex_shader_filepath, const std::string& fra
     std::cout << "loading vertex shader at filepath: " << vertex_shader_filepath << std::endl;
     std::cout << "loading fragment shader at filepath: " << fragment_shader_filepath << std::endl;
 
-    std::ifstream VSStream(vertex_shader_filepath);
-    std::stringstream VSBuffer;
-    VSBuffer << VSStream.rdbuf();
+    std::ifstream vs_stream(vertex_shader_filepath);
+    std::stringstream vs_buffer;
+    vs_buffer << vs_stream.rdbuf();
 
-    std::ifstream FSStream(fragment_shader_filepath);
-    std::stringstream FSBuffer;
-    FSBuffer << FSStream.rdbuf();
+    std::ifstream fs_stream(fragment_shader_filepath);
+    std::stringstream fs_buffer;
+    fs_buffer << fs_stream.rdbuf();
 
-    this->m_shader_id = create_shader(VSBuffer.str(), FSBuffer.str());
+    this->m_shader_id = create_shader(vs_buffer.str(), fs_buffer.str());
 }
 
 shader::~shader()
