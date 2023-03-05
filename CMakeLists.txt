@@ -3,6 +3,7 @@ project(opengl_sandbox)
 
 set(CMAKE_CXX_STANDARD 23)
 
+include_directories(src)
 include_directories(vendor)
 
 add_executable(opengl_sandbox
@@ -14,6 +15,8 @@ add_executable(opengl_sandbox
         vendor/imgui/imgui_tables.cpp
         vendor/imgui/imgui_widgets.cpp
         src/main.cpp
+        src/shader/shader.h
+        src/shader/shader.cpp
 )
 
 find_package ( OpenGL REQUIRED )
