@@ -1,6 +1,6 @@
 # opengl_sandbox
 
-Goal: Easy to use/understand environment for experimentation and low abstraction opengl/graphics examples for myself to reference.
+OpenGL sandbox for experiments and reference.
 
 TODO:
 - [ ] Batch Renderer
