@@ -85,7 +85,7 @@ int main()
     auto* p_test_menu = new test::test_menu(p_current_test);
     p_current_test = p_test_menu;
 
-    // registers tests here
+    // register tests
     {
         p_test_menu->register_test<test::test_single_triangle>("Single Triangle");
         p_test_menu->register_test<test::test_multiple_triangles>("Multiple Triangles (Individual Draw Calls)");

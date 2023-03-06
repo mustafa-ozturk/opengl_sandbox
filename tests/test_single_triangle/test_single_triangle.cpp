@@ -7,8 +7,8 @@ test::test_single_triangle::test_single_triangle()
     m_verticies = {
             //   x,      y,    z
               0.0f,  50.0f, 0.0f,     // A, i: 0
-             50.0f, -50.0f, 0.0f,    // B, i: 1
-            -50.0f, -50.0f, 0.0f    // C, i: 2
+             50.0f, -50.0f, 0.0f,     // B, i: 1
+            -50.0f, -50.0f, 0.0f     // C, i: 2
     };
     m_indices = {
             0, 1, 2,
@@ -28,16 +28,13 @@ test::test_single_triangle::test_single_triangle()
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_index_buffer_object);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(unsigned int), m_indices.data(), GL_STATIC_DRAW);
 
-    m_shader = new shader("resources/shaders/basic_color/basic_vertex_shader.glsl", "resources/shaders/basic_color/basic_fragment_shader.glsl");
+    m_shader = new shader("resources/shaders/basic_color/basic_vertex_shader.glsl",
+                          "resources/shaders/basic_color/basic_fragment_shader.glsl");
     m_shader->bind();
 
-    // centers model in the view
     glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(960 / 2, 540 / 2, 0));
-    // dont move the view
     glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
-    // projects in a way that we can positions things using pixels
     glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
-    // model view projections
     glm::mat4 mvp = proj * view * model;
 
     m_shader->set_unifrom_mat4f("u_MVP", mvp);

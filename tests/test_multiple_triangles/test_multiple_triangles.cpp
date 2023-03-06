@@ -8,9 +8,10 @@ test::test_multiple_triangles::test_multiple_triangles()
         m_view(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
         m_proj(glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f))
 {
-    m_verticies = { // x,y,z
-            0.0f,  50.0f, 0.0f,   // A, i: 0
-            50.0f, -50.0f, 0.0f,   // B, i: 1
+    m_verticies = {
+             // x,       y,    z,
+             0.0f,   50.0f, 0.0f,   // A, i: 0
+             50.0f, -50.0f, 0.0f,   // B, i: 1
             -50.0f, -50.0f, 0.0f    // C, i: 2
     };
     m_indices = {
