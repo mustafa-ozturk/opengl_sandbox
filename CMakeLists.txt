@@ -23,6 +23,8 @@ add_executable(opengl_sandbox
         tests/test_utility/test_menu.cpp
         tests/test_single_triangle/test_single_triangle.h
         tests/test_single_triangle/test_single_triangle.cpp
+        tests/test_multiple_triangles/test_multiple_triangles.h
+        tests/test_multiple_triangles/test_multiple_triangles.cpp
 )
 
 find_package ( OpenGL REQUIRED )
