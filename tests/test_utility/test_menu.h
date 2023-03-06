@@ -8,7 +8,7 @@ namespace test {
     class test_menu : public test
     {
     public:
-        explicit test_menu(test*& pCurrentTest);
+        explicit test_menu(test*& p_current_test);
 
         void on_imgui_render() override;
 
