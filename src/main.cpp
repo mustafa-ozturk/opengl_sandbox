@@ -7,6 +7,8 @@
 #include "imgui/imgui_impl_glfw.h"
 #include "imgui/imgui_impl_opengl3.h"
 
+#include "test_utility/test_menu.h"
+
 #define WINDOW_WIDTH 1280
 #define WINDOW_HEIGHT 720
 
@@ -75,7 +77,15 @@ int main()
         ImGui_ImplOpenGL3_Init((char*) glGetString(GL_NUM_SHADING_LANGUAGE_VERSIONS));
     }
 
-    // setup tests here
+    // setup tests
+    test::test* p_current_test = nullptr;
+    auto* p_test_menu = new test::test_menu(p_current_test);
+    p_current_test = p_test_menu;
+
+    // registers tests here
+    {
+
+    }
 
     while (!glfwWindowShouldClose(p_window))
     {

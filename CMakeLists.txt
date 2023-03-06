@@ -4,6 +4,7 @@ project(opengl_sandbox)
 set(CMAKE_CXX_STANDARD 23)
 
 include_directories(src)
+include_directories(tests)
 include_directories(vendor)
 
 add_executable(opengl_sandbox
@@ -17,6 +18,9 @@ add_executable(opengl_sandbox
         src/main.cpp
         src/shader/shader.h
         src/shader/shader.cpp
+        tests/test_utility/test.h
+        tests/test_utility/test_menu.h
+        tests/test_utility/test_menu.cpp
 )
 
 find_package ( OpenGL REQUIRED )
