@@ -31,7 +31,7 @@ test::test_multiple_triangles::test_multiple_triangles()
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_index_buffer_object);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(unsigned int), m_indices.data(), GL_STATIC_DRAW);
 
-    m_shader = new shader("resources/shaders/basic_vertex_shader.glsl", "resources/shaders/basic_fragment_shader.glsl");
+    m_shader = new shader("resources/shaders/basic_color/basic_vertex_shader.glsl", "resources/shaders/basic_color/basic_fragment_shader.glsl");
     m_shader->bind();
 }
 

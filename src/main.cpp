@@ -10,6 +10,7 @@
 #include "test_utility/test_menu.h"
 #include "test_single_triangle/test_single_triangle.h"
 #include "test_multiple_triangles/test_multiple_triangles.h"
+#include "test_single_quad_texture/test_single_quad_texture.h"
 
 #define WINDOW_WIDTH 1280
 #define WINDOW_HEIGHT 720
@@ -88,6 +89,9 @@ int main()
     {
         p_test_menu->register_test<test::test_single_triangle>("Single Triangle");
         p_test_menu->register_test<test::test_multiple_triangles>("Multiple Triangles (Individual Draw Calls)");
+        p_test_menu->register_test<test::test_single_quad_texture>("Single Quad Texture");
+
+        std::cout << "--------------------------------------" << std::endl;
     }
 
     while (!glfwWindowShouldClose(p_window))
