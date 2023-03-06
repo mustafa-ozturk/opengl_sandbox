@@ -21,6 +21,8 @@ add_executable(opengl_sandbox
         tests/test_utility/test.h
         tests/test_utility/test_menu.h
         tests/test_utility/test_menu.cpp
+        tests/test_single_triangle/test_single_triangle.h
+        tests/test_single_triangle/test_single_triangle.cpp
 )
 
 find_package ( OpenGL REQUIRED )

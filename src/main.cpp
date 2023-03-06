@@ -8,6 +8,7 @@
 #include "imgui/imgui_impl_opengl3.h"
 
 #include "test_utility/test_menu.h"
+#include "test_single_triangle/test_single_triangle.h"
 
 #define WINDOW_WIDTH 1280
 #define WINDOW_HEIGHT 720
@@ -84,7 +85,7 @@ int main()
 
     // registers tests here
     {
-
+        p_test_menu->register_test<test::test_single_triangle>("Single Triangle");
     }
 
     while (!glfwWindowShouldClose(p_window))
@@ -102,7 +103,22 @@ int main()
             ImGui::NewFrame();
         }
 
-        // run tests here
+        // run tests
+        if (p_current_test){
+            p_current_test->on_render();
+            ImGui::Begin("Tests");
+            if (p_current_test != p_test_menu)
+            {
+                if (ImGui::Button("<-"))
+                {
+                    delete p_current_test;
+                    p_current_test = p_test_menu;
+                }
+                ImGui::Text("Test: %s", p_current_test->get_test_name().c_str());
+            }
+            p_current_test->on_imgui_render();
+            ImGui::End();
+        }
 
         // render ImGui Frame
         {
