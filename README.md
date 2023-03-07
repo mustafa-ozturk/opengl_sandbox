@@ -8,3 +8,5 @@ TODO:
 - [ ] Text Rendering
 - [ ] Model View Projection Matrix Visualizer 
 - [ ] Basic Math Library 
+- [ ] Orthographic Camera
+- [ ] Perspective Camera
