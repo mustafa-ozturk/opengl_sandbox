@@ -38,8 +38,8 @@ test::test_single_quad_texture::test_single_quad_texture()
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_index_buffer_object);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(unsigned int), m_indices.data(), GL_STATIC_DRAW);
 
-    m_shader = new shader("assets/shaders/basic_texture/basic_texture_vertex_shader.glsl",
-                          "assets/shaders/basic_texture/basic_texture_fragment_shader.glsl");
+    m_shader = new shader("assets/shaders/basic_texture/vertex.glsl",
+                          "assets/shaders/basic_texture/fragment.glsl");
     m_shader->bind();
 
     glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(960 / 2, 540 / 2, 0));
