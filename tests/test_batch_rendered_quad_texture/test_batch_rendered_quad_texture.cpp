@@ -50,8 +50,8 @@ test::test_batch_rendered_quad_texture::test_batch_rendered_quad_texture()
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_index_buffer_object);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(unsigned int), m_indices.data(), GL_STATIC_DRAW);
 
-    m_shader = new shader("assets/shaders/batch_rendered_textures/batch_rendered_texture_vertex_shader.glsl",
-                          "assets/shaders/batch_rendered_textures/batch_rendered_texture_fragment_shader.glsl");
+    m_shader = new shader("assets/shaders/batch_rendered_textures/vertex.glsl",
+                          "assets/shaders/batch_rendered_textures/fragment.glsl");
     m_shader->bind();
 
     glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
