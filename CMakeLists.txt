@@ -30,7 +30,7 @@ add_executable(opengl_sandbox
         tests/test_multiple_triangles/test_multiple_triangles.cpp
         tests/test_single_quad_texture/test_single_quad_texture.h
         tests/test_single_quad_texture/test_single_quad_texture.cpp
-        src/gl_check_error/gl_check_error.cpp)
+        src/gl_check_error/gl_check_error.cpp tests/test_batch_rendered_quad_texture/test_batch_rendered_quad_texture.cpp tests/test_batch_rendered_quad_texture/test_batch_rendered_quad_texture.h)
 
 find_package ( OpenGL REQUIRED )
 target_link_libraries(opengl_sandbox OpenGL::GL )

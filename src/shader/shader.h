@@ -26,13 +26,13 @@ public:
     void set_unifrom_mat4f(const std::string& name, const glm::mat4& matrix);
 
     unsigned int get_shader_id() const { return m_shader_id; }
+    GLint get_uniform_location(const std::string& name) const;
 private:
     // compile given shader code and test it, return the shader ID
     unsigned int compile_shader(unsigned int type, const std::string& source);
     // create a shader program that is linked and validated, return the shader program ID
     unsigned int create_shader(const std::string& vertexShader, const std::string& fragmentShader);
 
-    GLint get_uniform_location(const std::string& name) const;
 private:
     std::string m_vertex_shader_filepath;
     std::string m_fragment_shader_filepath;
