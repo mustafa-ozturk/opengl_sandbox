@@ -16,8 +16,11 @@ add_executable(opengl_sandbox
         vendor/imgui/imgui_tables.cpp
         vendor/imgui/imgui_widgets.cpp
         src/main.cpp
+        src/gl_check_error/gl_check_error.h
         src/shader/shader.h
         src/shader/shader.cpp
+        src/texture/texture.h
+        src/texture/texture.cpp
         tests/test_utility/test.h
         tests/test_utility/test_menu.h
         tests/test_utility/test_menu.cpp
@@ -25,11 +28,9 @@ add_executable(opengl_sandbox
         tests/test_single_triangle/test_single_triangle.cpp
         tests/test_multiple_triangles/test_multiple_triangles.h
         tests/test_multiple_triangles/test_multiple_triangles.cpp
-        src/texture/texture.h
-        src/texture/texture.cpp
         tests/test_single_quad_texture/test_single_quad_texture.h
         tests/test_single_quad_texture/test_single_quad_texture.cpp
-)
+        src/gl_check_error/gl_check_error.cpp)
 
 find_package ( OpenGL REQUIRED )
 target_link_libraries(opengl_sandbox OpenGL::GL )

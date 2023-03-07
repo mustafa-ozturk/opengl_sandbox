@@ -12,8 +12,11 @@
 #include "test_multiple_triangles/test_multiple_triangles.h"
 #include "test_single_quad_texture/test_single_quad_texture.h"
 
+#include "gl_check_error/gl_check_error.h"
+
 #define WINDOW_WIDTH 1280
 #define WINDOW_HEIGHT 720
+#define GLSL_VERSION "#version 400"
 
 int main()
 {
@@ -77,7 +80,7 @@ int main()
 
         // Setup Platform/Renderer backends
         ImGui_ImplGlfw_InitForOpenGL(p_window, true);
-        ImGui_ImplOpenGL3_Init((char*) glGetString(GL_NUM_SHADING_LANGUAGE_VERSIONS));
+        ImGui_ImplOpenGL3_Init(GLSL_VERSION);
     }
 
     // setup tests
@@ -93,6 +96,8 @@ int main()
 
         std::cout << "--------------------------------------" << std::endl;
     }
+
+    gl_check_error();
 
     while (!glfwWindowShouldClose(p_window))
     {

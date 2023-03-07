@@ -9,7 +9,6 @@
 #include "test_utility/test.h"
 #include "shader/shader.h"
 
-
 namespace test
 {
     class test_single_triangle : public test
