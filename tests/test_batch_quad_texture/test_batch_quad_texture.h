@@ -11,11 +11,11 @@
 #include "texture/texture.h"
 
 namespace test {
-    class test_batch_rendered_quad_texture : public test
+    class test_batch_quad_texture : public test
     {
     public:
-        test_batch_rendered_quad_texture();
-        ~test_batch_rendered_quad_texture() override;
+        test_batch_quad_texture();
+        ~test_batch_quad_texture() override;
 
         void on_render() override;
         void on_imgui_render() override;

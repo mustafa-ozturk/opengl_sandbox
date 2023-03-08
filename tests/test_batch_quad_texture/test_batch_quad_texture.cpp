@@ -1,6 +1,6 @@
-#include "test_batch_rendered_quad_texture.h"
+#include "test_batch_quad_texture.h"
 
-test::test_batch_rendered_quad_texture::test_batch_rendered_quad_texture()
+test::test_batch_quad_texture::test_batch_quad_texture()
         : m_vertex_array_object(0),
           m_vertex_buffer_object(0),
           m_index_buffer_object(0),
@@ -68,14 +68,14 @@ test::test_batch_rendered_quad_texture::test_batch_rendered_quad_texture()
     glUniform1iv(m_shader->get_uniform_location("u_Textures"), 2, samplers);
 }
 
-test::test_batch_rendered_quad_texture::~test_batch_rendered_quad_texture()
+test::test_batch_quad_texture::~test_batch_quad_texture()
 {
     delete m_shader;
     delete m_texture_christmas_tree;
     delete m_texture_snowman;
 }
 
-void test::test_batch_rendered_quad_texture::on_render()
+void test::test_batch_quad_texture::on_render()
 {
     // bind the textures to the right slots
     m_texture_christmas_tree->bind(0);
@@ -85,7 +85,7 @@ void test::test_batch_rendered_quad_texture::on_render()
     glDrawElements(GL_TRIANGLES, m_indices.size(), GL_UNSIGNED_INT, nullptr);
 }
 
-void test::test_batch_rendered_quad_texture::on_imgui_render()
+void test::test_batch_quad_texture::on_imgui_render()
 {
 
 }

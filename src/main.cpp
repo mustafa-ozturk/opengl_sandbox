@@ -11,7 +11,7 @@
 #include "test_single_triangle/test_single_triangle.h"
 #include "test_multiple_triangles/test_multiple_triangles.h"
 #include "test_single_quad_texture/test_single_quad_texture.h"
-#include "test_batch_rendered_quad_texture/test_batch_rendered_quad_texture.h"
+#include "test_batch_quad_texture/test_batch_quad_texture.h"
 
 #include "gl_check_error/gl_check_error.h"
 
@@ -94,7 +94,7 @@ int main()
         p_test_menu->register_test<test::test_single_triangle>("Single Triangle");
         p_test_menu->register_test<test::test_multiple_triangles>("Multiple Triangles (Individual Draw Calls)");
         p_test_menu->register_test<test::test_single_quad_texture>("Single Quad Texture");
-        p_test_menu->register_test<test::test_batch_rendered_quad_texture>("Batch Rendered Quad Textures");
+        p_test_menu->register_test<test::test_batch_quad_texture>("Batch Rendered Quad Textures");
 
         std::cout << "--------------------------------------" << std::endl;
     }
