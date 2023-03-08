@@ -84,6 +84,7 @@ void test::test_batch_dynamic_geometry::on_render()
     auto q1 = batch_renderer::create_quad(500.0f, 100.0f, 1.0f, 100.0f);
 
     vertex verticies[8];
+    // memcyp copies q.size() * sizeof(vertex) bytes from q.data() into verticies
     memcpy(verticies, q0.data(), q0.size() * sizeof(vertex));
     memcpy(verticies + q0.size(), q1.data(), q1.size() * sizeof(vertex));
 

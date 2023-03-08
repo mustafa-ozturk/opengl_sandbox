@@ -28,7 +28,6 @@ namespace test {
         void on_imgui_render() override;
         std::string get_test_name() override { return "Batch Rendered Dynamic Geometry"; };
     private:
-        std::vector<GLfloat> m_verticies;
         std::vector<GLuint> m_indices;
 
         GLuint m_vertex_array_object;
