@@ -16,12 +16,15 @@ add_executable(opengl_sandbox
         vendor/imgui/imgui_tables.cpp
         vendor/imgui/imgui_widgets.cpp
         src/main.cpp
+        src/vertex.h
         src/gl_check_error/gl_check_error.h
         src/gl_check_error/gl_check_error.cpp
         src/shader/shader.h
         src/shader/shader.cpp
         src/texture/texture.h
         src/texture/texture.cpp
+        src/batch_renderer/batch_renderer.cpp
+        src/batch_renderer/batch_renderer.h
         tests/test_utility/test.h
         tests/test_utility/test_menu.h
         tests/test_utility/test_menu.cpp
@@ -35,6 +38,8 @@ add_executable(opengl_sandbox
         tests/test_batch_quad_texture/test_batch_quad_texture.h
         tests/test_sandbox/test_sandbox.cpp
         tests/test_sandbox/test_sandbox.h
+        tests/test_batch_dynamic_geometry/test_batch_dynamic_geometry.cpp
+        tests/test_batch_dynamic_geometry/test_batch_dynamic_geometry.h
 )
 
 find_package ( OpenGL REQUIRED )

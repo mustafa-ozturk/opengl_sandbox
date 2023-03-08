@@ -13,6 +13,7 @@
 #include "test_multiple_triangles/test_multiple_triangles.h"
 #include "test_single_quad_texture/test_single_quad_texture.h"
 #include "test_batch_quad_texture/test_batch_quad_texture.h"
+#include "test_batch_dynamic_geometry/test_batch_dynamic_geometry.h"
 
 #include "gl_check_error/gl_check_error.h"
 
@@ -97,6 +98,7 @@ int main()
         p_test_menu->register_test<test::test_multiple_triangles>("Multiple Triangles (Individual Draw Calls)");
         p_test_menu->register_test<test::test_single_quad_texture>("Single Quad Texture");
         p_test_menu->register_test<test::test_batch_quad_texture>("Batch Rendered Quad Textures");
+        p_test_menu->register_test<test::test_batch_dynamic_geometry>("Batch Rendered Dynamic Geometry");
 
         std::cout << "--------------------------------------" << std::endl;
     }
@@ -133,6 +135,7 @@ int main()
             }
             p_current_test->on_imgui_render();
             ImGui::End();
+            gl_check_error();
         }
 
         // render ImGui Frame
@@ -146,10 +149,16 @@ int main()
             glfwSwapBuffers(p_window);
             glfwPollEvents();
         }
+        gl_check_error();
     }
 
     // cleanup
     {
+        ImGui_ImplOpenGL3_Shutdown();
+        ImGui_ImplGlfw_Shutdown();
+        ImGui::DestroyContext();
+
+        glfwDestroyWindow(p_window);
         glfwTerminate();
     }
 
