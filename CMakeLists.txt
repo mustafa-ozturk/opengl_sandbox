@@ -33,6 +33,8 @@ add_executable(opengl_sandbox
         tests/test_single_quad_texture/test_single_quad_texture.cpp
         tests/test_batch_quad_texture/test_batch_quad_texture.cpp
         tests/test_batch_quad_texture/test_batch_quad_texture.h
+        tests/test_sandbox/test_sandbox.cpp
+        tests/test_sandbox/test_sandbox.h
 )
 
 find_package ( OpenGL REQUIRED )

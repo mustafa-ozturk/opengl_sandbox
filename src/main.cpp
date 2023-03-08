@@ -8,6 +8,7 @@
 #include "imgui/imgui_impl_opengl3.h"
 
 #include "test_utility/test_menu.h"
+#include "test_sandbox/test_sandbox.h"
 #include "test_single_triangle/test_single_triangle.h"
 #include "test_multiple_triangles/test_multiple_triangles.h"
 #include "test_single_quad_texture/test_single_quad_texture.h"
@@ -91,6 +92,7 @@ int main()
 
     // register tests
     {
+        p_test_menu->register_test<test::test_sandbox>("Sandbox");
         p_test_menu->register_test<test::test_single_triangle>("Single Triangle");
         p_test_menu->register_test<test::test_multiple_triangles>("Multiple Triangles (Individual Draw Calls)");
         p_test_menu->register_test<test::test_single_quad_texture>("Single Quad Texture");
