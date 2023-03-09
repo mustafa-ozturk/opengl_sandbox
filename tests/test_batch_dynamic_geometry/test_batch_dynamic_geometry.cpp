@@ -73,6 +73,9 @@ test::test_batch_dynamic_geometry::test_batch_dynamic_geometry()
 
 test::test_batch_dynamic_geometry::~test_batch_dynamic_geometry()
 {
+    glDeleteVertexArrays(1, &m_vertex_array_object);
+    glDeleteBuffers(1, &m_vertex_buffer_object);
+    glDeleteBuffers(1, &m_index_buffer_object);
     delete m_shader;
     delete m_texture_christmas_tree;
     delete m_texture_snowman;

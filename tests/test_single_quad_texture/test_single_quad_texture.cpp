@@ -56,6 +56,9 @@ test::test_single_quad_texture::test_single_quad_texture()
 
 test::test_single_quad_texture::~test_single_quad_texture()
 {
+    glDeleteVertexArrays(1, &m_vertex_array_object);
+    glDeleteBuffers(1, &m_vertex_buffer_object);
+    glDeleteBuffers(1, &m_index_buffer_object);
     delete m_shader;
     delete m_texture;
 }
