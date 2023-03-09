@@ -36,6 +36,10 @@ namespace test {
 
         float m_quad_position[2] = {100.0f, 100.0f};
 
+        const int m_max_quad_count = 1000;
+        const int m_max_vertex_count = m_max_quad_count * 4;
+        const int m_max_index_count = m_max_quad_count * 6;
+
         shader* m_shader;
         texture* m_texture_christmas_tree;
         texture* m_texture_snowman;

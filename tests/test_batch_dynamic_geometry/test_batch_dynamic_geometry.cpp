@@ -17,7 +17,7 @@ test::test_batch_dynamic_geometry::test_batch_dynamic_geometry()
     // 4, 5, 6, 6, 7, 4
     // 4 verticies per quad
     // 100 quads = 400 verticies
-    for (int i = 0; i < 100 * 4; i++)
+    for (int i = 0; i < m_max_index_count; i++)
     {
         m_indices.push_back(i);
         m_indices.push_back(i + 1);
@@ -35,7 +35,7 @@ test::test_batch_dynamic_geometry::test_batch_dynamic_geometry()
     glGenBuffers(1, &m_vertex_buffer_object);
     glBindBuffer(GL_ARRAY_BUFFER, m_vertex_buffer_object);
     // allocate vertex buffer without copying data
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertex) * 100 * 4, nullptr, GL_DYNAMIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, m_max_vertex_count * sizeof(vertex), nullptr, GL_DYNAMIC_DRAW);
 
     // vertex positions
     glEnableVertexAttribArray(0);
