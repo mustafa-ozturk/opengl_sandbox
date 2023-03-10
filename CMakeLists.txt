@@ -25,6 +25,8 @@ add_executable(opengl_sandbox
         src/texture/texture.cpp
         src/batch_renderer/batch_renderer.cpp
         src/batch_renderer/batch_renderer.h
+        src/orthographic_camera/orthographic_camera.cpp
+        src/orthographic_camera/orthographic_camera.h
         tests/test_utility/test.h
         tests/test_utility/test_menu.h
         tests/test_utility/test_menu.cpp
@@ -40,6 +42,8 @@ add_executable(opengl_sandbox
         tests/test_sandbox/test_sandbox.h
         tests/test_batch_dynamic_geometry/test_batch_dynamic_geometry.cpp
         tests/test_batch_dynamic_geometry/test_batch_dynamic_geometry.h
+        tests/test_orthographic_camera/test_orthographic_camera.cpp
+        tests/test_orthographic_camera/test_orthographic_camera.h
 )
 
 find_package ( OpenGL REQUIRED )

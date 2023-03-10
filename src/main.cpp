@@ -14,6 +14,7 @@
 #include "test_single_quad_texture/test_single_quad_texture.h"
 #include "test_batch_quad_texture/test_batch_quad_texture.h"
 #include "test_batch_dynamic_geometry/test_batch_dynamic_geometry.h"
+#include "test_orthographic_camera/test_orthographic_camera.h"
 
 #include "gl_check_error/gl_check_error.h"
 
@@ -99,6 +100,7 @@ int main()
         p_test_menu->register_test<test::test_single_quad_texture>("Single Quad Texture");
         p_test_menu->register_test<test::test_batch_quad_texture>("Batch Rendered Quad Textures");
         p_test_menu->register_test<test::test_batch_dynamic_geometry>("Batch Rendered Dynamic Geometry");
+        p_test_menu->register_test<test::test_orthographic_camera>("Orthographic Camera");
 
         std::cout << "--------------------------------------" << std::endl;
     }
