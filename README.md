@@ -1,6 +1,6 @@
 # opengl_sandbox
 
-OpenGL sandbox for experiments and reference.
+OpenGL sandbox for experiments, reference and learning.
 
 TODO:
 - [ ] Batch Renderer
