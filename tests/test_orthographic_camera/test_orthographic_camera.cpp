@@ -9,10 +9,10 @@ test::test_orthographic_camera::test_orthographic_camera()
       m_orthographic_camera(-1.6f, 1.6f, -0.9f, 0.9f)
 {
     m_verticies = {
-            //   x,      y,    z
+             // x,     y,    z
              0.0f,  0.5f, 0.0f,     // A, i: 0
              0.5f, -0.5f, 0.0f,     // B, i: 1
-            -0.5f, -0.5f, 0.0f     // C, i: 2
+            -0.5f, -0.5f, 0.0f      // C, i: 2
     };
     m_indices = {
             0, 1, 2,

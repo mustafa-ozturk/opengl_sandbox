@@ -20,7 +20,7 @@ namespace test
 
         void on_render() override;
         void on_imgui_render() override;
-        std::string get_test_name()  { return "Single Triangle"; };
+        std::string get_test_name()  { return "Orthographic Camera"; };
     private:
         std::vector<GLfloat> m_verticies;
         std::vector<GLuint> m_indices;
